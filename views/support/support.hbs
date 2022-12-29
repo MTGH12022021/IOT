@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="ms-3">
-                <h6 class="mb-0">Jhon Doe</h6>
-                <span>Admin</span>
+                <h6 class="mb-0">{{name}}</h6>
+                <span>User</span>
             </div>
         </div>
         <div class="navbar-nav w-100">
@@ -31,7 +31,7 @@
         <div class="col-sm-12 col-xl-12">
             <div class="bg-secondary rounded h-60 p-4">
                 <h6 class="mb-4">Support Form</h6>
-                <form method="POST" id="signup-form" class="signup-form">
+                <form method="POST" action="/support" id="signup-form" class="signup-form">
                     <div class="form-floating mb-3">
                         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
                             name="text" style="height: 200px;"></textarea>
@@ -43,3 +43,62 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="bg-secondary rounded h-60 p-4">
+                <h6 class="mb-4">Support Form</h6>
+                <form method="POST" action="/support/buzzer" id="signup-form" class="signup-form">
+                    <div class="form-floating mb-3">
+                        <p class="text-danger">Yêu cầu tắt còi báo và hỗ trợ kĩ thuật</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary " id="submit">Send mail</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Widget Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Group information 2</h6>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded-circle mx-auto mb-4" src="img/loi.jpg"
+                            style="width: 100px; height: 100px;">
+                        <h5 class="mb-1">NGUYỄN TIẾN LỢI</h5>
+                        <p>Lý 20CLC5</p>
+                        <p class="mb-0">Mã số sinh viên 20127553, chuyên ngành Công Nghệ Phần Mềm</p>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded-circle mx-auto mb-4" src="img/hung.jpg"
+                            style="width: 100px; height: 100px;">
+                        <h5 class="mb-1">LU PHI HÙNG</h5>
+                        <p>Lý 20CLC5</p>
+                        <p class="mb-0">Mã số sinh viên 20127509, chuyên ngành Mạng Máy Tính hướng an toàn thông tin</p>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded-circle mx-auto mb-4" src="img/tien.jpg"
+                            style="width: 100px; height: 100px;">
+                        <h5 class="mb-1">NGUYỄN QUANG TIẾN</h5>
+                        <p>Lý 20CLC5</p>
+                        <p class="mb-0">Mã số sinh viên 20127430, chuyên ngành Mạng Máy Tính hướng an toàn thông tin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <iframe class="position-relative rounded w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.609095089664!2d106.67977081488502!3d10.764579892329596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1ecb87f953%3A0x575eb988d6c9c70d!2zMjc3IMSQLiBOZ3V54buFbiBWxINuIEPhu6ssIFBoxrDhu51uZyA0LCBRdeG6rW4gNSwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1672293720123!5m2!1sen!2s"
+                    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"
+                    style="filter: grayscale(100%) invert(92%) contrast(83%); border: 0;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Widget End -->

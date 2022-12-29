@@ -13,7 +13,8 @@ function getChat(req, res) {
                 // đếm để tính có bao nhiêu trang
                 if (err) return next(err);
                 res.render("chat/chat", {
-                    chat
+                    chat, 
+                    name: req.user.name
                 });
             });
         });
