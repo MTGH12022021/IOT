@@ -18,7 +18,7 @@ async function get(req, res) {
         });
     }).then(async (resolve) => {
         console.log(resolve);
-        if (resolve >= 60) {
+        if (resolve >= 50) {
             const text = "Hi, admin" + "\nNội dung: Cháy rồi chạy đi" + "\nThân mến";
             let resp = await sendMail("Cảnh báo cháy", text);
         }
