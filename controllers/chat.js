@@ -28,14 +28,14 @@ async function postChat(req, res) {
     const date = new Date() // today, now
 
     // Timezone zero UTC offset
-    console.log(date.toLocaleString("en-US", { timeZone: "America/New_York" })) // YYYY-MM-DD
+    console.log(date.toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" })) // YYYY-MM-DD
 
     // Timezone of User Agent
 
     const chat = new Chat({
         name: req.user.name,
         comment: comment,
-        time: date.toLocaleString("en-US", { timeZone: "America/New_York" })
+        time: date.toLocaleString("en-US", { timeZone: "Asia/Ho_Chi_Minh" })
     });
     await chat.save();
     res.redirect("/chat");

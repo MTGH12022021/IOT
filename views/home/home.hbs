@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-   
+
   </div>
 </div>
 <!-- Sale & Revenue End -->
@@ -167,24 +167,7 @@
         } else {
           $('#room3').html('<p style="color:green;">' + "Không có người" + "</p>");
         }
-        dataChart = [response.room.countUse1, response.room.countUse2, response.room.countUse3]
-        console.log(dataChart);
-        var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
-        var myChart1 = new Chart(ctx1, {
-          type: "bar",
-          data: {
-            labels: ["Phòng 1", "Phòng 2", "Phòng 3"],
-            datasets: [{
-              label: "Số lượng người sử dụng",
-              data: dataChart,
-              backgroundColor: "rgba(235, 22, 22, .5)"
-            },
-            ]
-          },
-          options: {
-            responsive: true
-          }
-        });
+
       }
     });
   }
@@ -192,6 +175,24 @@
 
   $(document).ready(function () {
     {
+      var chart = JSON.parse(decodeURI("{{this.options}}"));
+      const dataChart = [chart.count1, chart.count2, chart.count3];
+      var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
+      var myChart1 = new Chart(ctx1, {
+        type: "bar",
+        data: {
+          labels: ["Phòng 1", "Phòng 2", "Phòng 3"],
+          datasets: [{
+            label: "Số lượng người sử dụng",
+            data: dataChart,
+            backgroundColor: "rgba(235, 22, 22, .5)"
+          },
+          ]
+        },
+        options: {
+          responsive: true
+        }
+      });
       loadTemperture();
       setInterval(() => {
         setTimeout(() => {
@@ -201,5 +202,5 @@
     }
 
   });
-  
+
 </script>
